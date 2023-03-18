@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Draw a Line</h1>
+<p> To draw a straight line on a canvas, use the following methods:<br>
+    moveTo(x,y) - defines the starting point of the line<br>
+    lineTo(x,y) - defines the ending point of the line<br>
+    To actually draw the line, you must use one of the "ink" methods, like stroke().</p>
+
+<canvas id="myCanvas1" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+
+
+<h1>Draw a Circle</h1>
+<p>To draw a circle on a canvas, use the following methods:
+    beginPath() - begins a path
+    arc(x,y,r,startangle,endangle) - creates an arc/curve. 
+    To create a circle with arc(): Set start angle to 0 and end angle to 2*Math.PI. 
+    The x and y parameters define the x- and y-coordinates of the center of the circle. 
+    The r parameter defines the radius of the circle.</p>
+
+ 
+    <canvas id="myCanvas2" width="200" height="100"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+
+
+<!--script code for Circle -->
+
+<script>
+var canvas = document.getElementById("myCanvas2");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+</script> 
+
+    
+
+<!--script code for line-->
+
+<script>
+
+var canvas = document.getElementById("myCanvas1");
+var ctx = canvas.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
